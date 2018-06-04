@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9389064520C59A3700A36E0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389064420C59A3700A36E0C /* AppDelegate.swift */; };
-		9389064720C59A3700A36E0C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389064620C59A3700A36E0C /* ViewController.swift */; };
+		9389064720C59A3700A36E0C /* PhotosListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389064620C59A3700A36E0C /* PhotosListViewController.swift */; };
 		9389064A20C59A3700A36E0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9389064820C59A3700A36E0C /* Main.storyboard */; };
 		9389064C20C59A3B00A36E0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9389064B20C59A3B00A36E0C /* Assets.xcassets */; };
 		9389064F20C59A3B00A36E0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9389064D20C59A3B00A36E0C /* LaunchScreen.storyboard */; };
@@ -32,7 +32,7 @@
 		659439E0455ACFD9DCCFEC0E /* Pods-tumblr_images.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tumblr_images.release.xcconfig"; path = "Pods/Target Support Files/Pods-tumblr_images/Pods-tumblr_images.release.xcconfig"; sourceTree = "<group>"; };
 		9389064120C59A3700A36E0C /* tumblr_images.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tumblr_images.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9389064420C59A3700A36E0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9389064620C59A3700A36E0C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9389064620C59A3700A36E0C /* PhotosListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosListViewController.swift; sourceTree = "<group>"; };
 		9389064920C59A3700A36E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9389064B20C59A3B00A36E0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9389064E20C59A3B00A36E0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,13 +93,7 @@
 		9389064320C59A3700A36E0C /* tumblr_images */ = {
 			isa = PBXGroup;
 			children = (
-				9389066420C59CBF00A36E0C /* Codable+Extension.swift */,
-				9389066120C59CBF00A36E0C /* Optinal+Extension.swift */,
-				93F227EA20C5A194006DCC38 /* String+Extension.swift */,
-				9389066020C59CBF00A36E0C /* UINib+Extension.swift */,
-				9389066320C59CBF00A36E0C /* UIStoryboard+Extension.swift */,
-				9389066220C59CBF00A36E0C /* UIViewController+Alert.swift */,
-				9389066520C59CBF00A36E0C /* UIViewController+Extension.swift */,
+				93F227F020C5A49F006DCC38 /* Extensions */,
 				9389065B20C59B2000A36E0C /* Constans */,
 				9389065A20C59A9F00A36E0C /* API */,
 				9389065720C59A5400A36E0C /* Storyboard */,
@@ -114,7 +108,7 @@
 		9389065620C59A4400A36E0C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9389064620C59A3700A36E0C /* ViewController.swift */,
+				9389064620C59A3700A36E0C /* PhotosListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -145,6 +139,20 @@
 				9389065E20C59B4D00A36E0C /* ClosureType.swift */,
 			);
 			path = Constans;
+			sourceTree = "<group>";
+		};
+		93F227F020C5A49F006DCC38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9389066420C59CBF00A36E0C /* Codable+Extension.swift */,
+				9389066120C59CBF00A36E0C /* Optinal+Extension.swift */,
+				93F227EA20C5A194006DCC38 /* String+Extension.swift */,
+				9389066020C59CBF00A36E0C /* UINib+Extension.swift */,
+				9389066320C59CBF00A36E0C /* UIStoryboard+Extension.swift */,
+				9389066220C59CBF00A36E0C /* UIViewController+Alert.swift */,
+				9389066520C59CBF00A36E0C /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F8A14145933EE525F828EAD9 /* Pods */ = {
@@ -272,7 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9389064720C59A3700A36E0C /* ViewController.swift in Sources */,
+				9389064720C59A3700A36E0C /* PhotosListViewController.swift in Sources */,
 				9389066B20C59CBF00A36E0C /* UIViewController+Extension.swift in Sources */,
 				9389066720C59CBF00A36E0C /* Optinal+Extension.swift in Sources */,
 				9389065F20C59B4D00A36E0C /* ClosureType.swift in Sources */,
