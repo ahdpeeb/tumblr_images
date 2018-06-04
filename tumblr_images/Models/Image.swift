@@ -9,8 +9,12 @@
 import Foundation
 import ObjectMapper
 
-class Image: Mappable {
-    var id: String!
+ protocol PhotoDisplayable {
+    var photo: Photo? { get }
+}
+
+final class Image: Mappable, PhotoDisplayable {
+    var id: Int!
     var date: String? //format: "2016-01-17 19:55:11 GMT"
     var timestamp: Int? //format: 1453060511
     var photos: [PhotoSet]?
@@ -24,5 +28,13 @@ class Image: Mappable {
         self.date <- map["date"]
         self.timestamp <- map["timestamp"]
         self.photos <- map["photos"]
+    }
+    
+    //MARK: PhotoDisplayable
+    
+    // get middle resolutions from all images
+    var photo: Photo? {
+        guard let allSizes = self.photos?.first?.allSizes else { return nil }
+        return allSizes[allSizes.count / 2]
     }
 }

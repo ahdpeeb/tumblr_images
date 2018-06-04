@@ -9,10 +9,10 @@
 import Foundation
 import ObjectMapper
 
-final class Photo {
-    var width: Int?
-    var height: Int?
-    private var url: String?
+final class Photo: Mappable {
+    var width: Float?
+    var height: Float?
+    var url: String?
     
     var imageURL: URL? {
         let urlString = self.url?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)

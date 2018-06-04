@@ -28,6 +28,9 @@
 		93F227F520C5AA38006DCC38 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227F420C5AA38006DCC38 /* Image.swift */; };
 		93F227F720C5B460006DCC38 /* PhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227F620C5B460006DCC38 /* PhotoSet.swift */; };
 		93F227F920C5B4A3006DCC38 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227F820C5B4A3006DCC38 /* Photo.swift */; };
+		93F227FF20C5C172006DCC38 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227FD20C5C172006DCC38 /* ImageTableViewCell.swift */; };
+		93F2280020C5C172006DCC38 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F227FE20C5C172006DCC38 /* ImageTableViewCell.xib */; };
+		93F2280220C5C5EC006DCC38 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2280120C5C5EC006DCC38 /* UITableView+Extension.swift */; };
 		DDC7E2832F57536875F2AD09 /* Pods_tumblr_images.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		93F227F420C5AA38006DCC38 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		93F227F620C5B460006DCC38 /* PhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSet.swift; sourceTree = "<group>"; };
 		93F227F820C5B4A3006DCC38 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		93F227FD20C5C172006DCC38 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		93F227FE20C5C172006DCC38 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
+		93F2280120C5C5EC006DCC38 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tumblr_images.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +107,7 @@
 		9389064320C59A3700A36E0C /* tumblr_images */ = {
 			isa = PBXGroup;
 			children = (
+				93F227FA20C5C13E006DCC38 /* Views */,
 				93F227F320C5AA20006DCC38 /* Models */,
 				93F227F020C5A49F006DCC38 /* Extensions */,
 				9389065B20C59B2000A36E0C /* Constans */,
@@ -156,6 +163,7 @@
 			children = (
 				9389066420C59CBF00A36E0C /* Codable+Extension.swift */,
 				9389066120C59CBF00A36E0C /* Optinal+Extension.swift */,
+				93F2280120C5C5EC006DCC38 /* UITableView+Extension.swift */,
 				93F227EA20C5A194006DCC38 /* String+Extension.swift */,
 				9389066020C59CBF00A36E0C /* UINib+Extension.swift */,
 				9389066320C59CBF00A36E0C /* UIStoryboard+Extension.swift */,
@@ -173,6 +181,31 @@
 				93F227F820C5B4A3006DCC38 /* Photo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		93F227FA20C5C13E006DCC38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93F227FB20C5C14C006DCC38 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93F227FB20C5C14C006DCC38 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				93F227FC20C5C15B006DCC38 /* ImageCell */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		93F227FC20C5C15B006DCC38 /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				93F227FD20C5C172006DCC38 /* ImageTableViewCell.swift */,
+				93F227FE20C5C172006DCC38 /* ImageTableViewCell.xib */,
+			);
+			path = ImageCell;
 			sourceTree = "<group>";
 		};
 		F8A14145933EE525F828EAD9 /* Pods */ = {
@@ -245,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9389064F20C59A3B00A36E0C /* LaunchScreen.storyboard in Resources */,
+				93F2280020C5C172006DCC38 /* ImageTableViewCell.xib in Resources */,
 				9389064C20C59A3B00A36E0C /* Assets.xcassets in Resources */,
 				9389064A20C59A3700A36E0C /* Main.storyboard in Resources */,
 			);
@@ -307,11 +341,13 @@
 				93F227ED20C5A203006DCC38 /* EndPoints.swift in Sources */,
 				93F227EB20C5A194006DCC38 /* String+Extension.swift in Sources */,
 				9389064520C59A3700A36E0C /* AppDelegate.swift in Sources */,
+				93F2280220C5C5EC006DCC38 /* UITableView+Extension.swift in Sources */,
 				9389065D20C59B2F00A36E0C /* Constans.swift in Sources */,
 				9389065920C59A9900A36E0C /* AbstractApiClient.swift in Sources */,
 				9389066620C59CBF00A36E0C /* UINib+Extension.swift in Sources */,
 				9389066820C59CBF00A36E0C /* UIViewController+Alert.swift in Sources */,
 				9389066A20C59CBF00A36E0C /* Codable+Extension.swift in Sources */,
+				93F227FF20C5C172006DCC38 /* ImageTableViewCell.swift in Sources */,
 				93F227F920C5B4A3006DCC38 /* Photo.swift in Sources */,
 				9389066920C59CBF00A36E0C /* UIStoryboard+Extension.swift in Sources */,
 				93F227EF20C5A265006DCC38 /* ApiConstans.swift in Sources */,

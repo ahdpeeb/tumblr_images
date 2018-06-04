@@ -12,10 +12,10 @@ import ObjectMapper
 final class PhotoSet: Mappable {
     var caption: String?
     var original: Photo?
-    var altSizes: [Photo]?
+    var allSizes: [Photo]?
     
     public var placeholderPhoto: Photo? {
-        return self.altSizes?.last
+        return self.allSizes?.last
     }
     
     //MARK: Mappable
@@ -26,6 +26,6 @@ final class PhotoSet: Mappable {
     func mapping(map: Map) {
         self.caption <- map["caption"]
         self.original <- map["original_size"]
-        self.altSizes <- map["alt_sizes"]
+        self.allSizes <- map["alt_sizes"]
     }
 }
