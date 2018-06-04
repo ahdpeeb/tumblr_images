@@ -17,5 +17,6 @@ struct Constans {
         static let JSONdeserelization = "Can't serealize server responce to json"
         static let JSONCollectionDeserelization = "Can't serealize server responce to json collection"
         static let internetConnection = "No internet connection"
+        static let responceDataMissed = "Responce data missed"
     }
 }

@@ -24,6 +24,10 @@
 		93F227EB20C5A194006DCC38 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227EA20C5A194006DCC38 /* String+Extension.swift */; };
 		93F227ED20C5A203006DCC38 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227EC20C5A203006DCC38 /* EndPoints.swift */; };
 		93F227EF20C5A265006DCC38 /* ApiConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227EE20C5A265006DCC38 /* ApiConstans.swift */; };
+		93F227F220C5A9FB006DCC38 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227F120C5A9FB006DCC38 /* ApiClient.swift */; };
+		93F227F520C5AA38006DCC38 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227F420C5AA38006DCC38 /* Image.swift */; };
+		93F227F720C5B460006DCC38 /* PhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227F620C5B460006DCC38 /* PhotoSet.swift */; };
+		93F227F920C5B4A3006DCC38 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227F820C5B4A3006DCC38 /* Photo.swift */; };
 		DDC7E2832F57536875F2AD09 /* Pods_tumblr_images.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,10 @@
 		93F227EA20C5A194006DCC38 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		93F227EC20C5A203006DCC38 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		93F227EE20C5A265006DCC38 /* ApiConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstans.swift; sourceTree = "<group>"; };
+		93F227F120C5A9FB006DCC38 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		93F227F420C5AA38006DCC38 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		93F227F620C5B460006DCC38 /* PhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSet.swift; sourceTree = "<group>"; };
+		93F227F820C5B4A3006DCC38 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tumblr_images.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +101,7 @@
 		9389064320C59A3700A36E0C /* tumblr_images */ = {
 			isa = PBXGroup;
 			children = (
+				93F227F320C5AA20006DCC38 /* Models */,
 				93F227F020C5A49F006DCC38 /* Extensions */,
 				9389065B20C59B2000A36E0C /* Constans */,
 				9389065A20C59A9F00A36E0C /* API */,
@@ -128,6 +137,7 @@
 				9389065820C59A9900A36E0C /* AbstractApiClient.swift */,
 				93F227EE20C5A265006DCC38 /* ApiConstans.swift */,
 				93F227EC20C5A203006DCC38 /* EndPoints.swift */,
+				93F227F120C5A9FB006DCC38 /* ApiClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -153,6 +163,16 @@
 				9389066520C59CBF00A36E0C /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93F227F320C5AA20006DCC38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				93F227F420C5AA38006DCC38 /* Image.swift */,
+				93F227F620C5B460006DCC38 /* PhotoSet.swift */,
+				93F227F820C5B4A3006DCC38 /* Photo.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		F8A14145933EE525F828EAD9 /* Pods */ = {
@@ -292,8 +312,12 @@
 				9389066620C59CBF00A36E0C /* UINib+Extension.swift in Sources */,
 				9389066820C59CBF00A36E0C /* UIViewController+Alert.swift in Sources */,
 				9389066A20C59CBF00A36E0C /* Codable+Extension.swift in Sources */,
+				93F227F920C5B4A3006DCC38 /* Photo.swift in Sources */,
 				9389066920C59CBF00A36E0C /* UIStoryboard+Extension.swift in Sources */,
 				93F227EF20C5A265006DCC38 /* ApiConstans.swift in Sources */,
+				93F227F720C5B460006DCC38 /* PhotoSet.swift in Sources */,
+				93F227F220C5A9FB006DCC38 /* ApiClient.swift in Sources */,
+				93F227F520C5AA38006DCC38 /* Image.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
