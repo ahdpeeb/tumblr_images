@@ -9,6 +9,7 @@
 
 import Foundation
 import Alamofire
+import ObjectMapper
 
 class AbstractApiClient: NSObject {
     public func loadObject<T: BaseMappable>(url: String,

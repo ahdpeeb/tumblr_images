@@ -23,6 +23,7 @@ extension Dictionary {
         
         do {
             let model: T = try JSONDecoder().decode(type.self, from: data)
+            return model
         } catch let error {
 
             #if debag

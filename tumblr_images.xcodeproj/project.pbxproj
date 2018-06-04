@@ -21,6 +21,9 @@
 		9389066920C59CBF00A36E0C /* UIStoryboard+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389066320C59CBF00A36E0C /* UIStoryboard+Extension.swift */; };
 		9389066A20C59CBF00A36E0C /* Codable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389066420C59CBF00A36E0C /* Codable+Extension.swift */; };
 		9389066B20C59CBF00A36E0C /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9389066520C59CBF00A36E0C /* UIViewController+Extension.swift */; };
+		93F227EB20C5A194006DCC38 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227EA20C5A194006DCC38 /* String+Extension.swift */; };
+		93F227ED20C5A203006DCC38 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227EC20C5A203006DCC38 /* EndPoints.swift */; };
+		93F227EF20C5A265006DCC38 /* ApiConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227EE20C5A265006DCC38 /* ApiConstans.swift */; };
 		DDC7E2832F57536875F2AD09 /* Pods_tumblr_images.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		9389066320C59CBF00A36E0C /* UIStoryboard+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Extension.swift"; sourceTree = "<group>"; };
 		9389066420C59CBF00A36E0C /* Codable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Codable+Extension.swift"; sourceTree = "<group>"; };
 		9389066520C59CBF00A36E0C /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		93F227EA20C5A194006DCC38 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		93F227EC20C5A203006DCC38 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		93F227EE20C5A265006DCC38 /* ApiConstans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiConstans.swift; sourceTree = "<group>"; };
 		DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tumblr_images.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,6 +95,7 @@
 			children = (
 				9389066420C59CBF00A36E0C /* Codable+Extension.swift */,
 				9389066120C59CBF00A36E0C /* Optinal+Extension.swift */,
+				93F227EA20C5A194006DCC38 /* String+Extension.swift */,
 				9389066020C59CBF00A36E0C /* UINib+Extension.swift */,
 				9389066320C59CBF00A36E0C /* UIStoryboard+Extension.swift */,
 				9389066220C59CBF00A36E0C /* UIViewController+Alert.swift */,
@@ -125,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				9389065820C59A9900A36E0C /* AbstractApiClient.swift */,
+				93F227EE20C5A265006DCC38 /* ApiConstans.swift */,
+				93F227EC20C5A203006DCC38 /* EndPoints.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -267,6 +276,8 @@
 				9389066B20C59CBF00A36E0C /* UIViewController+Extension.swift in Sources */,
 				9389066720C59CBF00A36E0C /* Optinal+Extension.swift in Sources */,
 				9389065F20C59B4D00A36E0C /* ClosureType.swift in Sources */,
+				93F227ED20C5A203006DCC38 /* EndPoints.swift in Sources */,
+				93F227EB20C5A194006DCC38 /* String+Extension.swift in Sources */,
 				9389064520C59A3700A36E0C /* AppDelegate.swift in Sources */,
 				9389065D20C59B2F00A36E0C /* Constans.swift in Sources */,
 				9389065920C59A9900A36E0C /* AbstractApiClient.swift in Sources */,
@@ -274,6 +285,7 @@
 				9389066820C59CBF00A36E0C /* UIViewController+Alert.swift in Sources */,
 				9389066A20C59CBF00A36E0C /* Codable+Extension.swift in Sources */,
 				9389066920C59CBF00A36E0C /* UIStoryboard+Extension.swift in Sources */,
+				93F227EF20C5A265006DCC38 /* ApiConstans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,7 +434,10 @@
 				DEVELOPMENT_TEAM = 2MQ5R4FSP4;
 				INFOPLIST_FILE = tumblr_images/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Nikola-Andriiev.tumblr-images";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -439,7 +454,10 @@
 				DEVELOPMENT_TEAM = 2MQ5R4FSP4;
 				INFOPLIST_FILE = tumblr_images/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Nikola-Andriiev.tumblr-images";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
