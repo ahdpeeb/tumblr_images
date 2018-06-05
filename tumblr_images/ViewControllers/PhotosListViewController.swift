@@ -19,6 +19,8 @@ class PhotosListViewController: UIViewController {
         }
     }
     
+    fileprivate var searchController = UISearchController(searchResultsController: nil)
+    
     private var images: [Image] = [] {
         didSet {
             self.tableView?.reloadData()
@@ -28,15 +30,26 @@ class PhotosListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.loadImages(tag: "lo")
+        self.configureSearchController()
+//        self.loadImages(tag: "")
     }
 }
 
 private extension PhotosListViewController {
     func configureTableView() {
-        self.tableView?.rowAutoHeight(estimatedRowHeight: 44.0)
         self.tableView?.registerCell(ImageTableViewCell.self)
         self.tableView?.tableFooterView = UIView()
+    }
+    
+    func configureSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        let searchBar = searchController.searchBar
+        searchBar.returnKeyType = .search
+        searchBar.delegate = self
+        searchBar.sizeToFit()
+        self.tableView?.tableHeaderView = searchBar
+        definesPresentationContext = true
     }
     
     func loadImages(tag: String) {
@@ -62,7 +75,7 @@ extension PhotosListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let photo = self.images[indexPath.row].photo else { return 0.0 }
+        guard let photo = self.images[indexPath.row].photo else { return 44.0 }
         let scaleFactor: CGFloat = CGFloat(photo.width ?? 0) / imageWidth
         
         return CGFloat(photo.height ?? 0.0) / scaleFactor + cellMargin * 2
@@ -73,3 +86,14 @@ extension PhotosListViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+extension PhotosListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+    }
+}
+
+extension PhotosListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let searchText = searchBar.text ?? ""
+        self.loadImages(tag: searchText)
+    }
+}
