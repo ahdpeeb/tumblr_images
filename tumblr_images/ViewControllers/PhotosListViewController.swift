@@ -23,6 +23,7 @@ class PhotosListViewController: UIViewController {
     
     private var images: [Image] = [] {
         didSet {
+            self.showNoItemsView(images.isEmpty)
             self.tableView?.reloadData()
         }
     }
@@ -31,7 +32,12 @@ class PhotosListViewController: UIViewController {
         super.viewDidLoad()
         
         self.configureSearchController()
-//        self.loadImages(tag: "")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.showNoItemsView(images.isEmpty)
     }
 }
 
@@ -50,6 +56,11 @@ private extension PhotosListViewController {
         searchBar.sizeToFit()
         self.tableView?.tableHeaderView = searchBar
         definesPresentationContext = true
+    }
+    
+    func showNoItemsView(_ value: Bool) {
+        let view = UINib.view(NoneItemsTableViewCell.self)
+        self.tableView?.backgroundView = value ? view : nil
     }
     
     func loadImages(tag: String) {
@@ -75,10 +86,10 @@ extension PhotosListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let photo = self.images[indexPath.row].photo else { return 44.0 }
-        let scaleFactor: CGFloat = CGFloat(photo.width ?? 0) / imageWidth
+        guard let photo = self.images[indexPath.row].photo else { return 2 }
+        let scaleFactor: CGFloat = CGFloat(photo.width ?? 0) / self.imageWidth
         
-        return CGFloat(photo.height ?? 0.0) / scaleFactor + cellMargin * 2
+        return CGFloat(photo.height ?? 0.0) / scaleFactor + self.cellMargin * 2
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

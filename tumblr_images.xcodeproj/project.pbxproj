@@ -31,6 +31,8 @@
 		93F227FF20C5C172006DCC38 /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F227FD20C5C172006DCC38 /* ImageTableViewCell.swift */; };
 		93F2280020C5C172006DCC38 /* ImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F227FE20C5C172006DCC38 /* ImageTableViewCell.xib */; };
 		93F2280220C5C5EC006DCC38 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2280120C5C5EC006DCC38 /* UITableView+Extension.swift */; };
+		93F2280820C661D1006DCC38 /* NoneItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2280620C661D1006DCC38 /* NoneItemsTableViewCell.swift */; };
+		93F2280920C661D1006DCC38 /* NoneItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F2280720C661D1006DCC38 /* NoneItemsTableViewCell.xib */; };
 		DDC7E2832F57536875F2AD09 /* Pods_tumblr_images.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		93F227FD20C5C172006DCC38 /* ImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
 		93F227FE20C5C172006DCC38 /* ImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageTableViewCell.xib; sourceTree = "<group>"; };
 		93F2280120C5C5EC006DCC38 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		93F2280620C661D1006DCC38 /* NoneItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoneItemsTableViewCell.swift; sourceTree = "<group>"; };
+		93F2280720C661D1006DCC38 /* NoneItemsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoneItemsTableViewCell.xib; sourceTree = "<group>"; };
 		DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tumblr_images.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -194,6 +198,7 @@
 		93F227FB20C5C14C006DCC38 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				93F2280520C661BF006DCC38 /* NoItemsCell */,
 				93F227FC20C5C15B006DCC38 /* ImageCell */,
 			);
 			path = TableView;
@@ -206,6 +211,15 @@
 				93F227FE20C5C172006DCC38 /* ImageTableViewCell.xib */,
 			);
 			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		93F2280520C661BF006DCC38 /* NoItemsCell */ = {
+			isa = PBXGroup;
+			children = (
+				93F2280620C661D1006DCC38 /* NoneItemsTableViewCell.swift */,
+				93F2280720C661D1006DCC38 /* NoneItemsTableViewCell.xib */,
+			);
+			path = NoItemsCell;
 			sourceTree = "<group>";
 		};
 		F8A14145933EE525F828EAD9 /* Pods */ = {
@@ -279,6 +293,7 @@
 			files = (
 				9389064F20C59A3B00A36E0C /* LaunchScreen.storyboard in Resources */,
 				93F2280020C5C172006DCC38 /* ImageTableViewCell.xib in Resources */,
+				93F2280920C661D1006DCC38 /* NoneItemsTableViewCell.xib in Resources */,
 				9389064C20C59A3B00A36E0C /* Assets.xcassets in Resources */,
 				9389064A20C59A3700A36E0C /* Main.storyboard in Resources */,
 			);
@@ -348,6 +363,7 @@
 				9389066820C59CBF00A36E0C /* UIViewController+Alert.swift in Sources */,
 				9389066A20C59CBF00A36E0C /* Codable+Extension.swift in Sources */,
 				93F227FF20C5C172006DCC38 /* ImageTableViewCell.swift in Sources */,
+				93F2280820C661D1006DCC38 /* NoneItemsTableViewCell.swift in Sources */,
 				93F227F920C5B4A3006DCC38 /* Photo.swift in Sources */,
 				9389066920C59CBF00A36E0C /* UIStoryboard+Extension.swift in Sources */,
 				93F227EF20C5A265006DCC38 /* ApiConstans.swift in Sources */,
