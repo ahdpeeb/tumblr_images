@@ -34,7 +34,6 @@ final class Image: Mappable, PhotoDisplayable {
     
     // get middle resolutions from all images
     var photo: Photo? {
-        guard let allSizes = self.photos?.first?.allSizes else { return nil }
-        return allSizes[allSizes.count / 2]
+        return self.photos?.first?.original
     }
 }

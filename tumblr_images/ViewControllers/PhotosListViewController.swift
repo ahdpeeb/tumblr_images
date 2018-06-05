@@ -9,7 +9,6 @@
 import UIKit
 
 class PhotosListViewController: UIViewController {
-    
     fileprivate var imageWidth: CGFloat = 300.0
     fileprivate var cellMargin: CGFloat = 8.0
     
@@ -70,6 +69,12 @@ private extension PhotosListViewController {
             self.displayAlert(message: error.localizedDescription)
         }
     }
+    
+    func showZoomPhotoController(_ image: UIImage) {
+        let controller = UIStoryboard.controllerFromMainStorybourd(cls: ZoomedPhotoViewController.self)!
+        controller.image = image
+        self.push(controller)
+    }
 }
 
 extension PhotosListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -86,7 +91,7 @@ extension PhotosListViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        guard let photo = self.images[indexPath.row].photo else { return 2 }
+        guard let photo = self.images[indexPath.row].photo else { return 16 }
         let scaleFactor: CGFloat = CGFloat(photo.width ?? 0) / self.imageWidth
         
         return CGFloat(photo.height ?? 0.0) / scaleFactor + self.cellMargin * 2
@@ -94,6 +99,9 @@ extension PhotosListViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let cell: ImageTableViewCell? = tableView.cell(path: indexPath)
+        (cell?.loadedImage)?.do { self.showZoomPhotoController($0) }
     }
 }
 

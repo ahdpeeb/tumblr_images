@@ -39,6 +39,7 @@
                     <navigationItem key="navigationItem" title="Photos" id="n4V-P1-ZUG"/>
                     <connections>
                         <outlet property="tableView" destination="pAY-i8-bG6" id="zOY-Q9-JaE"/>
+                        <segue destination="ye0-Md-3l3" kind="show" id="b4x-oF-OXZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,6 +63,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aa-bs-7Wq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-44" y="690.40479760119945"/>
+        </scene>
+        <!--Zoomed Photo View Controller-->
+        <scene sceneID="MMB-9W-fAG">
+            <objects>
+                <viewController storyboardIdentifier="ZoomedPhotoViewController" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="ye0-Md-3l3" customClass="ZoomedPhotoViewController" customModule="tumblr_images" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bqv-QM-GWE"/>
+                        <viewControllerLayoutGuide type="bottom" id="bYA-WT-2WP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fOz-H3-FDA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" minimumZoomScale="0.0" translatesAutoresizingMaskIntoConstraints="NO" id="EoZ-9g-dpF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dwi-6f-E4q">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Dwi-6f-E4q" secondAttribute="trailing" id="grn-sP-wvm"/>
+                                    <constraint firstItem="Dwi-6f-E4q" firstAttribute="leading" secondItem="EoZ-9g-dpF" secondAttribute="leading" id="iEN-WN-8j3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dwi-6f-E4q" secondAttribute="bottom" id="iFN-At-8qG"/>
+                                    <constraint firstItem="Dwi-6f-E4q" firstAttribute="top" secondItem="EoZ-9g-dpF" secondAttribute="top" id="jSs-C7-xDw"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="ye0-Md-3l3" id="qhL-fZ-eSO"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bYA-WT-2WP" firstAttribute="top" secondItem="EoZ-9g-dpF" secondAttribute="bottom" id="8Fb-OJ-JWx"/>
+                            <constraint firstAttribute="trailing" secondItem="EoZ-9g-dpF" secondAttribute="trailing" id="Ou0-nR-x4c"/>
+                            <constraint firstItem="EoZ-9g-dpF" firstAttribute="top" secondItem="Bqv-QM-GWE" secondAttribute="bottom" id="Pa5-GR-Pni"/>
+                            <constraint firstItem="EoZ-9g-dpF" firstAttribute="leading" secondItem="fOz-H3-FDA" secondAttribute="leading" id="Tas-uY-XX2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zRd-li-9W4"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Dwi-6f-E4q" id="FkT-Fv-J1c"/>
+                        <outlet property="imageViewBottomConstraint" destination="iFN-At-8qG" id="KOS-Tw-HhD"/>
+                        <outlet property="imageViewLeadingConstraint" destination="iEN-WN-8j3" id="aTx-ZT-Bm3"/>
+                        <outlet property="imageViewTopConstraint" destination="jSs-C7-xDw" id="Kuh-DX-0XC"/>
+                        <outlet property="imageViewTrailingConstraint" destination="grn-sP-wvm" id="SVl-Aj-AO5"/>
+                        <outlet property="scrollView" destination="EoZ-9g-dpF" id="5fC-Bh-UQH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RBX-YN-5Za" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888.8" y="689.5052473763119"/>
         </scene>
     </scenes>
 </document>

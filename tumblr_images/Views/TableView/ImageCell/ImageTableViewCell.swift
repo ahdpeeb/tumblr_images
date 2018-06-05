@@ -19,6 +19,12 @@ class ImageTableViewCell: UITableViewCell {
         }
     }
     
+    public var loadedImage: UIImage? {
+        get {
+            return self.photoImageView?.image
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

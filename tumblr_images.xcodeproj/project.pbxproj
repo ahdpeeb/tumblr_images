@@ -33,6 +33,7 @@
 		93F2280220C5C5EC006DCC38 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2280120C5C5EC006DCC38 /* UITableView+Extension.swift */; };
 		93F2280820C661D1006DCC38 /* NoneItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2280620C661D1006DCC38 /* NoneItemsTableViewCell.swift */; };
 		93F2280920C661D1006DCC38 /* NoneItemsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93F2280720C661D1006DCC38 /* NoneItemsTableViewCell.xib */; };
+		93F2280B20C6BF62006DCC38 /* ZoomedPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F2280A20C6BF62006DCC38 /* ZoomedPhotoViewController.swift */; };
 		DDC7E2832F57536875F2AD09 /* Pods_tumblr_images.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +68,7 @@
 		93F2280120C5C5EC006DCC38 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		93F2280620C661D1006DCC38 /* NoneItemsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoneItemsTableViewCell.swift; sourceTree = "<group>"; };
 		93F2280720C661D1006DCC38 /* NoneItemsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoneItemsTableViewCell.xib; sourceTree = "<group>"; };
+		93F2280A20C6BF62006DCC38 /* ZoomedPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomedPhotoViewController.swift; sourceTree = "<group>"; };
 		DDEF3C09E4F56673BE252667 /* Pods_tumblr_images.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tumblr_images.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				9389064620C59A3700A36E0C /* PhotosListViewController.swift */,
+				93F2280A20C6BF62006DCC38 /* ZoomedPhotoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				9389064520C59A3700A36E0C /* AppDelegate.swift in Sources */,
 				93F2280220C5C5EC006DCC38 /* UITableView+Extension.swift in Sources */,
 				9389065D20C59B2F00A36E0C /* Constans.swift in Sources */,
+				93F2280B20C6BF62006DCC38 /* ZoomedPhotoViewController.swift in Sources */,
 				9389065920C59A9900A36E0C /* AbstractApiClient.swift in Sources */,
 				9389066620C59CBF00A36E0C /* UINib+Extension.swift in Sources */,
 				9389066820C59CBF00A36E0C /* UIViewController+Alert.swift in Sources */,
